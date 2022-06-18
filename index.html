@@ -23,11 +23,11 @@
             <container class="container allInputs"> <!-- first container -->
                 <h2>Add Employee</h2> <!-- Add Employees --> <!-- Done -->
                 <container class="allInputs"> <!-- container to group all the input fields -->
-                    <input type="text" value="First Name"   class="input firstname">      </input>  <!-- inputs to enter first name -->
-                    <input type="text" value="Last Name"    class="input lastname">       </input>  <!-- inputs to enter last name -->
-                    <input value="ID"                       class="input id">             </input>  <!-- inputs to enter ID -->
-                    <input type="text" value="Title"        class="input title">          </input>  <!-- inputs to enter Title -->
-                    <input value="Annual Salary"            class="annualSalary">         </input>  <!-- inputs to enter Annual Salary -->
+                    <input type="text" placeholder="First Name"     id="firstName">   <!-- inputs to enter first name -->
+                    <input type="text" placeholder="Last Name"      id="lastName">    <!-- inputs to enter last name -->
+                    <input             placeholder="ID"             id="id">          <!-- inputs to enter ID -->
+                    <input type="text" placeholder="Title"          id="title">       <!-- inputs to enter Title -->
+                    <input             placeholder="Annual Salary" id="annualSalary"> <!-- inputs to enter Annual Salary -->
                 </container>
                 
                 <container>
@@ -49,22 +49,7 @@
                     </p>
                         
                         <tbody> <!-- body element of table-->
-                            <tr> <!-- second row--> <!-- place holder to add rows later --> 
-                                <td>place holder1</td> <!-- place holders for employee data after its submitted -->
-                                <td>place holder2</td>
-                                <td>place holder3</td>
-                                <td>place holder3</td>
-                                <td>place holder5</td>
-                                <!-- use $(this).closest().remove() when removing rows-->
-                            </tr>
-                            <tr> <!-- second row--> <!-- place holder to add rows later --> 
-                                <td>place holder1</td> <!-- place holders for employee data after its submitted -->
-                                <td>place holder2</td>
-                                <td>place holder3</td>
-                                <td>place holder3</td>
-                                <td>place holder5</td>
-                                <!-- use $(this).closest().remove() when removing rows-->
-                            </tr>
+                            <!-- submit button adds code to this location -->
                         </tbody>
 
                         <tfoot> <!-- footer element of table-->
@@ -78,8 +63,9 @@
 
 
 
-            <container class="totalMonthly"> <!-- container for total salary -->
-                <h2> Total Monthly placeholder ####</h2> <!-- add a span for number of total salaries -->
+            <container class="totalMonthlyBox"> <!-- container for total salary -->
+                <div> Total Monthly</div>
+                <div id="totalMonthlyNumber"> 1234 </div>  <!-- add a span for number of total salaries -->
             </container> <!-- closes the Total monthly salary calculator-->
 
 

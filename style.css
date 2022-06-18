@@ -28,6 +28,7 @@ td {
     padding: 5px;
 }
 
+
 /* adding fun color to EVEN tables header*/
 tr:nth-child(even) { 
     background-color: light gray;
@@ -40,4 +41,7 @@ tr:nth-child(odd) {
     /* background-color: lightcoral; */
 }
 
-
+/* class for the WHOLE total monthly calculator */
+.totalMonthlyBox { 
+    font-style: italic;
+}
