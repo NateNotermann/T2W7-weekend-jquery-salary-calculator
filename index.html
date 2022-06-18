@@ -36,6 +36,7 @@
                 
             </container class="table">
                     <table>
+                        <p> <!-- added p tag to add space between inputs and table -->
                         <thead> <!-- "thead" is a BLOCK-LEVEL element--><!-- should also have "tbody" & -->
                             <tr> <!-- "tr" TABLE ROW -->
                                 <th>First Name</th> <!-- "th" -is INLINE-BLOCK element, or COLUMN HEADER--> 
@@ -44,58 +45,48 @@
                                 <th>Title</th>
                                 <th>Annual Salary</th>
                             </tr>
-                        </thead>
+                        </thead> 
+                    </p>
                         
                         <tbody> <!-- body element of table-->
                             <tr> <!-- second row--> <!-- place holder to add rows later --> 
-                                <td>place holder1</td>
+                                <td>place holder1</td> <!-- place holders for employee data after its submitted -->
                                 <td>place holder2</td>
                                 <td>place holder3</td>
                                 <td>place holder3</td>
                                 <td>place holder5</td>
+                                <!-- use $(this).closest().remove() when removing rows-->
+                            </tr>
+                            <tr> <!-- second row--> <!-- place holder to add rows later --> 
+                                <td>place holder1</td> <!-- place holders for employee data after its submitted -->
+                                <td>place holder2</td>
+                                <td>place holder3</td>
+                                <td>place holder3</td>
+                                <td>place holder5</td>
+                                <!-- use $(this).closest().remove() when removing rows-->
                             </tr>
                         </tbody>
+
                         <tfoot> <!-- footer element of table-->
                             <!-- may not use tfoot -->
                         </tfoot>
 
-                    
-                        <!--thead-->
-                            <!--headings-->
-                            <!--headings-->
-                            <!--headings-->
-                            <!--headings-->
-                    </table>
-            </container>
+                    </table> <!-- closes the table -->
+            </container><!-- closes the table  container-->
 
 
-                    <!-- Inputs --> 
-                        <!-- First Name -->
-                        <!-- Last name -->
-                        <!-- ID -->
-                        <!-- Title -->
-                        <!-- Annual Salary -->
-                        <!-- use $(this).closest().remove() when removing rows-->
-                            <!-- Submit Button -->
 
-                
-                
-
-            </container>
 
 
             <container class="totalMonthly"> <!-- container for total salary -->
                 <h2> Total Monthly placeholder ####</h2> <!-- add a span for number of total salaries -->
+            </container> <!-- closes the Total monthly salary calculator-->
 
 
-
-            </container>
-
-
-            <container class="container3"> 
-            </container>
+        
             
             <footer>
+                <!-- nothing planned to go in footer -->
             </footer>
     
         </main> 

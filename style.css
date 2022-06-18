@@ -1,26 +1,39 @@
 
 
 
-
-table {
+/* main table styling*/
+table { 
     font-family: arial, sans-serif;
     border-collapse: collapse;
+    border: 3px solid black; 
     width: 100%;
 }
 
-td, th {
-    border: 1px solid #dddddd;
+/* main header row*/
+th {
+    border: 2px solid black;
+    text-align: left;
+    /* text-alight - is with in each cell */
+    padding: 5px;
+}
+
+/* general data cell styling*/
+td {
+    border: 1px solid black;
     text-align: left;
     padding: 5px;
 }
 
-tr:nth-child(even) { /*adding fun color to EVEN tables header*/
-    background-color: hotpink;
+/* adding fun color to EVEN tables header*/
+tr:nth-child(even) { 
+    background-color: light gray;
+    /* background-color: hotpink; */
 }
 
-tr:nth-child(odd) { /*adding fun color to ODD tables placeholder row*/ 
-    background-color: #34d2eb;
-
+/*adding fun color to ODD tables placeholder row*/ 
+tr:nth-child(odd) { 
+    background-color: white;
+    /* background-color: lightcoral; */
 }
 
 
