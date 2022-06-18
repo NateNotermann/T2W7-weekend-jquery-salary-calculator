@@ -1,0 +1,26 @@
+
+
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 5px;
+}
+
+tr:nth-child(even) { /*adding fun color to EVEN tables header*/
+    background-color: hotpink;
+}
+
+tr:nth-child(odd) { /*adding fun color to ODD tables placeholder row*/ 
+    background-color: #34d2eb;
+
+}
+
+

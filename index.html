@@ -19,17 +19,54 @@
             <h1>Salary Calculator</h1>
         </header>
         <main>
-            <container class="container1"> <!-- first container -->
+
+            <container class="container allInputs"> <!-- first container -->
                 <h2>Add Employee</h2> <!-- Add Employees --> <!-- Done -->
                 <container class="allInputs"> <!-- container to group all the input fields -->
+                    <input type="text" value="First Name"   class="input firstname">      </input>  <!-- inputs to enter first name -->
+                    <input type="text" value="Last Name"    class="input lastname">       </input>  <!-- inputs to enter last name -->
+                    <input value="ID"                       class="input id">             </input>  <!-- inputs to enter ID -->
+                    <input type="text" value="Title"        class="input title">          </input>  <!-- inputs to enter Title -->
+                    <input value="Annual Salary"            class="annualSalary">         </input>  <!-- inputs to enter Annual Salary -->
+                </container>
                 
-                    <input type="text" value="First Name"   class="firstname">      </input>  
-                    <input type="text" value="Last Name"    class="lastname">       </input>
-                    <input value="ID" class="id">                                   </input>
-                    <input value="Annual Salary"            class="annualSalary">   </input>
+                <container class="buttons">
+                    <button>Submit</button>
+                </container>
                 
+            </container class="table">
+                    <table>
+                        <thead> <!-- "thead" is a BLOCK-LEVEL element--><!-- should also have "tbody" & -->
+                            <tr> <!-- "tr" TABLE ROW -->
+                                <th>First Name</th> <!-- "th" -is INLINE-BLOCK element, or COLUMN HEADER--> 
+                                <th>Last Name</th> <!-- "th" is a header element that makes text bold-->
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>Annual Salary</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody> <!-- body element of table-->
+                            <tr> <!-- second row--> <!-- place holder to add rows later --> 
+                                <td>place holder1</td>
+                                <td>place holder2</td>
+                                <td>place holder3</td>
+                                <td>place holder3</td>
+                                <td>place holder5</td>
+                            </tr>
+                        </tbody>
+                        <tfoot> <!-- footer element of table-->
+                            <!-- may not use tfoot -->
+                        </tfoot>
 
-
+                    
+                        <!--thead-->
+                            <!--headings-->
+                            <!--headings-->
+                            <!--headings-->
+                            <!--headings-->
+                    </table>
+            </container>
 
 
                     <!-- Inputs --> 
@@ -40,7 +77,6 @@
                         <!-- Annual Salary -->
                         <!-- use $(this).closest().remove() when removing rows-->
                             <!-- Submit Button -->
-                </container>
 
                 
                 
@@ -48,7 +84,11 @@
             </container>
 
 
-            <container class="container2"> 
+            <container class="totalMonthly"> <!-- container for total salary -->
+                <h2> Total Monthly placeholder ####</h2> <!-- add a span for number of total salaries -->
+
+
+
             </container>
 
 
