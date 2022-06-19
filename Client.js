@@ -4,7 +4,11 @@ console.log( 'js' ); // confirm javascript is connected
 function onReady (){ 
     // click-listener for submit button
     $( '.submitButton' ).on( 'click' , addEmployee ); 
+    // click listener for the delete button
+    $('#deleteButton').on('click', 'tr', DeleteEmployee );
 }
+
+
 // global variables
 let employeeArray=[];// creates employee array
 let sum = 0; // VARIABLE to hold the SUM of the "employeeArray",
@@ -47,8 +51,6 @@ $('tbody').append(
     
     // takes current totalMonthly VARIABLE's value,
     // and adds the new employee's salary data too it
-    // totalMonthly =+ employeeObject.annualSalary; 
-
   
     // let array = [1,2,3,4];  //just a test array when creating loop
     sum = 0; //clears the "Sum" Variable. NEEDs to be in da function
@@ -62,13 +64,13 @@ totalMonthlyCap = 20000; // setting Total Monthly Cost Cap, easier to read
 
     if ( totalMonthly > totalMonthlyCap ) {
         console.log( 'whoops! Total Monthly Cost are too high!!' );
-        // $('.totalMonthlyNumber').class((totalMonthly)); 
-        
-        // $('.totalMonthlyNumber').removeClass('warning');
         $('.totalMonthlyNumber').addClass('warning');
-    } 
+        $('.totalMonthlyNumber').text(('MONTHLY COST ARE TOO HIGH --> ' + totalMonthly)); // test total monthly input
+    } else {
 
-    $('.totalMonthlyNumber').text((totalMonthly)); // test total monthly input
+        $('.totalMonthlyNumber').text((totalMonthly)); // test total monthly input
+    }
+
 
 
 // clears out all of the input fields 
