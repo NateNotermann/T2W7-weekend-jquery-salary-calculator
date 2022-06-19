@@ -26,7 +26,7 @@ If the monthly cost goes above $20,000, it will give you an alert, and highlight
 
 
 
-
+<!-- 
 
 [Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
 
@@ -34,4 +34,4 @@ If the monthly cost goes above $20,000, it will give you an alert, and highlight
 
 Your project description goes here. What problem did you solve? How did you solve it?
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md). -->
