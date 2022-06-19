@@ -42,6 +42,7 @@ $('tbody').append(
         <td> ${employeeObject.id} </td>
         <td> ${employeeObject.title} </td>
         <td> ${employeeObject.annualSalary} </td>
+        <td><button class="DeleteButton">Delete</button></td>
     </tr>` );
     
     // takes current totalMonthly VARIABLE's value,
