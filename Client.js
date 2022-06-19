@@ -4,8 +4,22 @@ console.log( 'js' ); // confirm javascript is connected
 function onReady (){ 
     // click-listener for submit button
     $( '.submitButton' ).on( 'click' , addEmployee ); 
-    // click listener for the delete button
-    $('#deleteButton').on('click', 'tr', DeleteEmployee );
+    // click listener targets the "tobdy", because it is on the DOM right away
+    // then finds class deleteButton that gets added later
+    $('tbody').on('click', '.deleteButton', deleteEmployee );
+}
+
+function deleteEmployee (){ // function to when delete is clicked, to remove that row/employee
+    console.log( 'delete me' ); //test the functions
+    
+    // $(this).parent().parent().remove(); // ".parent().parent()" - goes up one parent, then up another parent
+    // console.log( $(this).parent().parent().text() ); // console log ALL parent or parents aka WHOLE ROW
+
+    $(this).parents("tr").remove().val();
+    // console.log( $(this).parents("tr").val() ); // .parents can take in a specific parent element
+    $(this).
+
+    console.log('employeeArray', employeeArray );
 }
 
 
@@ -36,7 +50,7 @@ function addEmployee () { // this will be the main function that does most of th
 // push the value of each employee's salary into the "employeeArray"
 employeeArray.push(Number(employeeObject.annualSalary));
     
-    
+   //  '.html' - clears and changes html in one code
 
 // Targeted "tbody" ELEMENT, append employee info into a new row via "<tr>"    
 $('tbody').append( 
@@ -46,7 +60,7 @@ $('tbody').append(
         <td> ${employeeObject.id} </td>
         <td> ${employeeObject.title} </td>
         <td> ${employeeObject.annualSalary} </td>
-        <td><button class="DeleteButton">Delete</button></td>
+        <td><button class="deleteButton">Delete</button></td>
     </tr>` );
     
     // takes current totalMonthly VARIABLE's value,
@@ -86,10 +100,10 @@ $('#annualSalary').val('');
 
 
 
-// -- console.logs to test all important variables --
-console.log('employee array:', employeeArray); //works
-console.log('sum:', sum);//works
-console.log('total monthly:', totalMonthly); //works
+// // -- console.logs to test all important variables --
+// console.log('employee array:', employeeArray); //works
+// console.log('sum:', sum);//works
+// console.log('total monthly:', totalMonthly); //works
 
 
 } // ---- END of main "addEmployee" function ----
