@@ -54,10 +54,20 @@ $('tbody').append(
 //   for ( i=0; i<employeeArray.length; i++ ) { // loops through the array of employees
   for ( i of employeeArray ) { // loops through the array of employees
     sum += i; // takes SUM and adds each index of the "employeeArray"
+    totalMonthly = sum/12; // divided the SUM of Total Salaries by 12
 }
-totalMonthly = sum/12; // divided the SUM of Total Salaries by 12
-    // targets totalMonthlyNumber id, changes its value to "totalMonthly" variable's value
-    $('#totalMonthlyNumber').text((totalMonthly)); // test total monthly input
+    // targets totalMonthlyNumber CLASS, changes its value to "totalMonthly" variable's value
+totalMonthlyCap = 20000; // setting Total Monthly Cost Cap, easier to read
+
+    if ( totalMonthly > totalMonthlyCap ) {
+        console.log( 'whoops! Total Monthly Cost are too high!!' );
+        // $('.totalMonthlyNumber').class((totalMonthly)); 
+        
+        // $('.totalMonthlyNumber').removeClass('warning');
+        $('.totalMonthlyNumber').addClass('warning');
+    } 
+
+    $('.totalMonthlyNumber').text((totalMonthly)); // test total monthly input
 
 
 // clears out all of the input fields 
@@ -67,14 +77,16 @@ $('#id').val('');
 // $('#title').val(''); // dont want to clear title value
 $('#annualSalary').val('');
 
+//making an if else loop to see if total Monthly is over $20,000
+// if over $20,000 will change SUM background color to red
 
 
 
 
 // -- console.logs to test all important variables --
-// console.log('employee array:', employeeArray); //works
-// console.log('sum:', sum);//works
-// console.log('total monthly:', totalMonthly); //works
+console.log('employee array:', employeeArray); //works
+console.log('sum:', sum);//works
+console.log('total monthly:', totalMonthly); //works
 
 
 } // ---- END of main "addEmployee" function ----
