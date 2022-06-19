@@ -9,4 +9,4 @@ Your project description goes here. What problem did you solve? How did you solv
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
 
 
-![image info](salary-calc-wireframe.png) ![image info](screenshot1.jpeg) ![image info](screenshot3.jpeg)
+![image info](salary-calc-wireframe.png) ![image info](readme-table-example.gif) ![image info](screenshot3.jpeg)
