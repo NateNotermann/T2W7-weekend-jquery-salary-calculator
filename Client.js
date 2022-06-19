@@ -5,8 +5,11 @@ function onReady (){
     // click-listener for submit button
     $( '.submitButton' ).on( 'click' , addEmployee ); 
 }
-// global variable
-let totalMonthly = 0; // may change this to an a LOOPable ARRAY later
+// global variables
+let employeeArray=[];// creates employee array
+let sum = 0; // VARIABLE to hold the SUM of the "employeeArray",
+            // aka the total of all salaries
+let totalMonthly = 0; // VARIABLE to hold the Total Monthly value
 
 function addEmployee () { // this will be the main function that does most of the work
     // console.log( 'test submit button function' ); //test submit button function -works
@@ -19,12 +22,16 @@ function addEmployee () { // this will be the main function that does most of th
     //creates a VARIABLE, that is an OBJECT, to save employee info
     let employeeObject = { 
         //used ".val" because variable CAN'T save jQuery values
-        firstName: firstNameValue.val(), 
-        lastName: lastNameValue.val(),
-        id: idValue.val(),
-        title: titleValue.val(),
+        firstName:  firstNameValue.val(), 
+        lastName:   lastNameValue.val(),
+        id:         idValue.val(),
+        title:      titleValue.val(),
         annualSalary: annualSalaryValue.val(),
     }
+    
+// push the value of each employee's salary into the "employeeArray"
+employeeArray.push(Number(employeeObject.annualSalary));
+    
     
 
 // Targeted "tbody" ELEMENT, append employee info into a new row via "<tr>"    
@@ -42,21 +49,28 @@ $('tbody').append(
     // totalMonthly =+ employeeObject.annualSalary; 
 
   
-   
-   
-   
+    // let array = [1,2,3,4];  //just a test array when creating loop
+    sum = 0; //clears the "Sum" Variable. NEEDs to be in da function
+//   for ( i=0; i<employeeArray.length; i++ ) { // loops through the array of employees
+  for ( i of employeeArray ) { // loops through the array of employees
+    sum += i; // takes SUM and adds each index of the "employeeArray"
+}
+totalMonthly = sum/12; // divided the SUM of Total Salaries by 12
     // targets totalMonthlyNumber id, changes its value to "totalMonthly" variable's value
-    $('#totalMonthlyNumber').text(totalMonthly); 
-    console.log(totalMonthly);
-    // $('#totalMonthlyNumber').val('test');
+    $('#totalMonthlyNumber').text((totalMonthly)); // test total monthly input
 
 
+// clears out all of the input fields 
+$('#firstName').val('');
+$('#lastName').val('');
+$('#id').val('');
+// $('#title').val(''); // dont want to clear title value
+$('#annualSalary').val('');
 
-   
-
-
-
-
+// -- console.logs to test all important variables --
+console.log('employee array:', employeeArray); //works
+console.log('sum:', sum);//works
+console.log('total monthly:', totalMonthly); //works
 
 
 } // ---- END of main "addEmployee" function ----

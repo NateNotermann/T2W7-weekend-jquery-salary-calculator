@@ -20,21 +20,29 @@
         </header>
         <main>
 
-            <container class="container allInputs"> <!-- first container -->
-                <h2>Add Employee</h2> <!-- Add Employees --> <!-- Done -->
-                <container class="allInputs"> <!-- container to group all the input fields -->
+            <container class="mainInputContainer"> <!-- All Inputs & Submit Button -->
+                <h2>Add Employee</h2> 
+                <container class="inputs"> <!-- contains JUST input fields -->
                     <input type="text" placeholder="First Name"     id="firstName">   <!-- inputs to enter first name -->
                     <input type="text" placeholder="Last Name"      id="lastName">    <!-- inputs to enter last name -->
-                    <input             placeholder="ID"             id="id">          <!-- inputs to enter ID -->
-                    <input type="text" placeholder="Title"          id="title">       <!-- inputs to enter Title -->
-                    <input             placeholder="Annual Salary" id="annualSalary"> <!-- inputs to enter Annual Salary -->
+                    <input             placeholder="ID"             id="id" required>          <!-- inputs to enter ID -->
+                   <!-- <input type="text" placeholder="Title"          id="title">-->       <!-- inputs to enter Title -->
+                    <select name="title" id="title" required>
+                        <option value="Intern">Intern</option>
+                        <option value="CEO">CEO</option>
+                        <option value="Software Engineer">Software Engineer</option>
+                        <option value="Backend Developer">Backend Developer</option>
+                        <option value="Project Manager">Project Manager</option>
+                        <option value="D.A.L.E.">D.A.L.E.</option>
+                      </select>
+                    <input type="number" placeholder="Annual Salary" id="annualSalary"> <!-- inputs to enter Annual Salary -->
                 </container>
                 
-                <container>
-                    <button class="submitButton">Submit</button>
-                </container>
+                <button class="submitButton">Submit</button>
+               
+            </container> <!-- END of "mainInputContainer"-->
                 
-            </container class="table">
+            <container class="table">
                     <table>
                         <p> <!-- added p tag to add space between inputs and table -->
                         <thead> <!-- "thead" is a BLOCK-LEVEL element--><!-- should also have "tbody" & -->
@@ -64,8 +72,8 @@
 
 
             <container class="totalMonthlyBox"> <!-- container for total salary -->
-                <div> Total Monthly</div>
-                <div id="totalMonthlyNumber"> 1234 </div>  <!-- add a span for number of total salaries -->
+                <h2> Total Monthly</h2>
+                <h2 type="Number" id="totalMonthlyNumber"> 1234 </h2>  <!-- add a span for number of total salaries -->
             </container> <!-- closes the Total monthly salary calculator-->
 
 
