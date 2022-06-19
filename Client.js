@@ -67,10 +67,14 @@ $('#id').val('');
 // $('#title').val(''); // dont want to clear title value
 $('#annualSalary').val('');
 
+
+
+
+
 // -- console.logs to test all important variables --
-console.log('employee array:', employeeArray); //works
-console.log('sum:', sum);//works
-console.log('total monthly:', totalMonthly); //works
+// console.log('employee array:', employeeArray); //works
+// console.log('sum:', sum);//works
+// console.log('total monthly:', totalMonthly); //works
 
 
 } // ---- END of main "addEmployee" function ----

@@ -7,14 +7,24 @@ Create an application that records employee salaries and adds salaries up to rep
 
 ## Assignment
 
-The application should have an input form that collects _employee first name, last name, ID number, job title, annual salary_.
+The application should have an input form that collects <!-- Done -->
+_employee first name, <!-- Done -->
+ last name, <!-- Done -->
+ ID number, <!-- Done -->
+ job title,<!-- Done -->
+  annual salary_.<!-- Done -->
 <!-- added input fields>
 <!-- added table with headers and columns -->
 
 A 'Submit' button should collect the form information,
 <!-- added button -->
 <!-- working on button functions -->
- store the information to calculate monthly costs, append information to the DOM and clear the input fields. Using the stored information, calculate monthly costs and append this to the to DOM. If the total monthly cost exceeds $20,000, add a red background color to the total monthly cost.
+ store the information to calculate monthly costs, <!-- Done - gets added to an array -->
+append information to the DOM <!-- Done -->
+and clear the input fields. <!-- Done  - clears fields after submitting -->
+Using the stored information, calculate monthly costs and append this to the to DOM. <!-- appends the SUM to the DOM -->
+If the total monthly cost exceeds $20,000, 
+add a red background color to the total monthly cost.
 
 Create a delete button that removes an employee from the DOM. 
 For Base mode, it does **not** need to remove that Employee's salary from the reported total.
